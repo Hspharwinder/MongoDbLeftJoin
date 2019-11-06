@@ -1,0 +1,41 @@
+  
+  join query (left join)
+  --------------------------------------
+  db.getCollection('users').aggregate([
+       {
+          $lookup:
+          {     
+              from: 'songs',
+              localField: '_id',
+              foreignField: 'artistId',              
+              as: 'songdetails'
+              
+          }
+        }
+    ])
+    
+    insert query doc song
+    --------------------------------
+    db.songs.insert(
+      {         
+        "name" : "abcSong3",
+        "artistId" : 2,
+        "userType" : 1,
+        "filePath" : "name3",
+        "thumbnailPath" : "name3",
+      }    
+    )
+    
+     insert query doc user
+    --------------------------------
+    db.songs.insert(
+     {
+        "name" : "name1",
+        "email" : "1@gmail.com",
+        "status" : 1,
+        "description" : "des ArtitstSptest8",
+        "userName" : "1@gmail.com",
+        "password" : "bcbe98e43ae",
+    }
+   )    
+    
