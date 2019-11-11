@@ -1,0 +1,92 @@
+ 
+    insert query doc user
+    --------------------------------
+    db.user.insert(
+        /* 1 */
+        {
+            "_id" : 2,
+            "name" : "name1",
+            "email" : "1@gmail.com",
+            "status" : 1,
+            "description" : "des ArtitstSptest8",
+            "userName" : "1@gmail.com",
+            "password" : "7bd43d6ffa381044c92338
+        }
+
+        /* 2 */
+        {
+            "_id" : 3,
+            "name" : "name2",
+            "email" : "2@gmail.com",
+            "status" : 1,
+            "description" : "des ArtitstSptest8",
+            "userName" : "2@gmail.com",
+            "password" : "ed3d67b6e2e09ee93
+        }
+
+        /* 3 */
+        {
+            "_id" : 4,
+            "name" : "name3",
+            "email" : "3@gmail.com",
+            "status" : 1,
+            "description" : "des ArtitstSptest8",
+            "userName" : "3@gmail.com",
+            "password" : "152f8c6d38197adb
+        }
+   )   
+
+
+    insert query doc song
+    --------------------------------
+    db.songs.insert(
+        /* 1 */
+        {
+            "_id" : ObjectId("5dc27fba58d3c937c070d29c"),
+            "name" : "abcSong",
+            "artistId" : 2,
+            "userType" : 1,
+            "filePath" : "name2",
+            "thumbnailPath" : "name2",
+        }
+
+        /* 2 */
+        {
+            "_id" : ObjectId("5dc27fc158d3c937c070d29d"),
+            "name" : "abcSong2",
+            "artistId" : 2,
+            "userType" : 1,
+            "filePath" : "name2",
+            "thumbnailPath" : "name2",
+        }
+
+        /* 3 */
+        {
+            "_id" : ObjectId("5dc27fce58d3c937c070d29e"),
+            "name" : "abcSong3",
+            "artistId" : 3,
+            "userType" : 1,
+            "filePath" : "name3",
+            "thumbnailPath" : "name3",
+        }
+
+        /* 4 */
+        {
+            "_id" : ObjectId("5dc27fd158d3c937c070d29f"),
+            "name" : "abcSong3",
+            "artistId" : 3,
+            "userType" : 1,
+            "filePath" : "name3",
+            "thumbnailPath" : "name3",
+        }
+
+        /* 5 */
+        {
+            "_id" : ObjectId("5dc29b01fc32824821fd4081"),
+            "name" : "abcSong3",
+            "artistId" : 2.0,
+            "userType" : 1.0,
+            "filePath" : "name3",
+            "thumbnailPath" : "name3",
+        }
+    )

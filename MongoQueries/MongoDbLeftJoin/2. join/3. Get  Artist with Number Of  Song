@@ -1,0 +1,24 @@
+  
+1. get artist with number of song  
+--------------------------------------
+ db.getCollection('users').aggregate([
+        {
+            "$lookup":
+            {
+                from: 'songs',
+                localField: '_id',
+                foreignField: 'artistId',
+                as: 'songDetail'
+            }
+        },
+        {
+            "$project":
+            {
+                "name": 1,
+                "status": 1,               
+                "songDetail": { "artistId": 1, "name": 1 },
+                "numOfSong":{$size:"$songDetail"}                 
+            }
+        } 
+    ])
+    

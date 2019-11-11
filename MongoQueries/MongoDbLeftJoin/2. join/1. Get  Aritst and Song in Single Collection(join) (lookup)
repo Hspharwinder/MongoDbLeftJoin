@@ -1,0 +1,17 @@
+  
+1. join query (left join) 
+  --------------------------------------
+  db.getCollection('users').aggregate([
+       {
+          $lookup:
+          {     
+              from: 'songs',
+              localField: '_id',
+              foreignField: 'artistId',              
+              as: 'songdetails'
+              
+          }
+        }
+    ])
+Note::  query will be return all data of both doc where _id = artistId
+    
